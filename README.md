@@ -15,7 +15,7 @@ Website nhiều trang cho FCBVN (Expert Fire Protection & Safety Services), gồ
 ## Công nghệ
 
 - **HTML5** với cấu trúc semantic
-- **Tailwind CSS** (CDN) – theme màu primary `#f20d0d`, font Public Sans
+- **Tailwind CSS** (CDN) – theme màu primary `#f20d0d`, font Be Vietnam Pro
 - **Google Material Symbols** cho icon
 - **Header & Footer chung**: file `js/components.js` chứa một header và một footer dùng cho tất cả trang. Mỗi trang gọi `FCBVN.renderHeader('home'|'services'|'projects'|'about'|'news'|'contact')` và `FCBVN.renderFooter()` để hiển thị; chỉnh sửa menu hoặc footer tại một nơi là đủ.
 - Không cần build, chạy trực tiếp file HTML

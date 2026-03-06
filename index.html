@@ -4,13 +4,17 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>FCBVN – Dịch vụ Phòng cháy chữa cháy & An toàn chuyên nghiệp</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+  <title>FCBVN | Giải Pháp Phòng Cháy Chữa Cháy Toàn Diện</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
-    rel="stylesheet" />
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
     rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
@@ -18,10 +22,11 @@
         extend: {
           colors: {
             "primary": "#f20d0d",
+            "navy": "#0a192f",
             "background-light": "#f8f5f5",
             "background-dark": "#221010",
           },
-          fontFamily: { "display": ["Public Sans"] },
+          fontFamily: { "display": ["Be Vietnam Pro", "sans-serif"] },
           borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
         },
       },
@@ -29,7 +34,7 @@
   </script>
   <style>
     body {
-      font-family: 'Public Sans', sans-serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
     }
 
     .material-symbols-outlined {
@@ -38,185 +43,229 @@
   </style>
 </head>
 
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
   <div class="relative flex min-h-screen flex-col overflow-x-hidden">
     <div id="site-header"></div>
 
-    <main class="flex-1">
+    <main class="flex-grow">
       <!-- Hero Section -->
-      <section class="relative h-[400px] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-slate-900">
-          <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent z-10"></div>
-          <img alt="Professional Fire Safety Equipment" class="w-full h-full object-cover opacity-60"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXFQ0Q9x5ACr65rA88hojdc9oTJ4QaJ6V6jW29kSfdhxKhQlQYvCPOiQpJywSihrsNJfHm01VeyU56_ZG-sZrxKBKMuEvMmz-kyh8uvsGA2V-TLupePuB4sWSXCqKrXlASp8ULKPSea2sYlzdM4vMWAS3DUleghToeI-jPJV5Yn_TeOFP0-xDtRsr9aUlqtS2TdLzm48ZpZ_pOBTgd-3tpJnJcN0DD-KOdN0pg7L6TVzbQ0a9y2yXhcy0IKWsO3yHNluBuEA4EVz0" />
-        </div>
-        <div class="container mx-auto px-4 lg:px-40 relative z-20">
-          <div class="max-w-2xl">
-            <span
-              class="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-full mb-4 uppercase tracking-widest">Giải pháp của chúng tôi</span>
-            <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-6">Dịch vụ Phòng cháy chữa cháy <br />&amp; An toàn chuyên nghiệp</h1>
-            <p class="text-slate-300 text-lg md:text-xl leading-relaxed">Giải pháp an toàn toàn diện từ đầu đến cuối, bảo vệ tính mạng, tài sản và hoạt động kinh doanh nhờ đổi mới và chất lượng kỹ thuật.
+      <section class="relative overflow-hidden bg-background-light px-6 py-16 dark:bg-background-dark lg:py-24">
+        <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-center">
+          <div class="relative z-10 flex flex-col gap-8">
+            <div
+              class="inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-bold text-primary">
+              <span class="material-symbols-outlined text-sm">verified_user</span>
+              Tiêu chuẩn an toàn quốc tế
+            </div>
+            <h1 class="text-5xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white lg:text-7xl">
+              Giải Pháp <span class="text-primary">Phòng Cháy</span> Chữa Cháy Toàn Diện
+            </h1>
+            <p class="max-w-xl text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+              Đơn vị hàng đầu cung cấp giải pháp thiết kế, thi công lắp đặt và bảo trì hệ thống PCCC chuyên nghiệp. Bảo
+              vệ tài sản và tính mạng của bạn là sứ mệnh của chúng tôi.
             </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="contact.html#form"
+                class="rounded-xl bg-primary px-8 py-4 text-base font-bold text-white shadow-lg shadow-primary/20 transition-transform hover:scale-105 active:scale-95">
+                Liên hệ ngay
+              </a>
+              <a href="projects.html"
+                class="flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-bold text-slate-900 shadow-sm border border-slate-200 transition-all hover:bg-slate-50 dark:bg-slate-800 dark:text-white dark:border-slate-700">
+                <span class="material-symbols-outlined">play_circle</span>
+                Xem dự án
+              </a>
+            </div>
+            <div class="flex items-center gap-8 border-t border-slate-200 pt-8 dark:border-slate-800">
+              <div>
+                <div class="text-3xl font-bold text-slate-900 dark:text-white"><span data-countup="15"
+                    data-suffix="+">0+</span></div>
+                <div class="text-sm text-slate-500">Năm kinh nghiệm</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-slate-900 dark:text-white"><span data-countup="500"
+                    data-suffix="+">0+</span></div>
+                <div class="text-sm text-slate-500">Dự án hoàn thành</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-slate-900 dark:text-white">24/7</div>
+                <div class="text-sm text-slate-500">Hỗ trợ kỹ thuật</div>
+              </div>
+            </div>
+          </div>
+          <div class="relative lg:block">
+            <div class="aspect-square w-full rounded-2xl bg-cover bg-center shadow-2xl ring-8 ring-primary/5"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAeFa5xxnMJ7ZNmeCJMit_MTfU42LJloGbxTP9VC5I2l4cQ7op6q4z1qnnO9QvoGyIv-2K2wLKVLpHJYUtTaPu2ITCGVqQ5CIu0bWyVTTcTAyIiTTimtkNLpBiPcgYwrqCH9T_n_MskigBWRROv_YUVgrMUysY4imrL0qG1seh0s5YDSFnDI4f5Hz1YOPrzh_4_WYwF_XAwDbFwUI098B4Cg2LOiKztyDzZPkvxqMzdgJ9rKL5mw-n3BkUP2q5Xu4KdGJSVfZkmPjc')">
+            </div>
+            <div class="absolute -bottom-6 -left-6 rounded-2xl bg-white p-6 shadow-xl dark:bg-slate-800">
+              <div class="flex items-center gap-4">
+                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-green-500 text-white">
+                  <span class="material-symbols-outlined">check</span>
+                </div>
+                <div>
+                  <div class="text-sm font-bold text-slate-900 dark:text-white">Kiểm định an toàn</div>
+                  <div class="text-xs text-slate-500">Cấp bởi cục PCCC</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Services Grid -->
-      <section id="services" class="py-20 bg-background-light dark:bg-background-dark">
-        <div class="container mx-auto px-4 lg:px-40">
-          <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-            <div class="max-w-2xl">
-              <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Các lĩnh vực dịch vụ cốt lõi</h2>
-              <p class="text-slate-600 dark:text-slate-400 text-lg">Chúng tôi cung cấp dịch vụ kỹ thuật và bảo trì chuyên sâu cho nhiều ngành, đảm bảo tuân thủ tiêu chuẩn phòng cháy chữa cháy toàn cầu và địa phương.</p>
-            </div>
-            <div class="flex gap-2">
-              <button
-                class="p-2 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary transition-all"><span
-                  class="material-symbols-outlined">grid_view</span></button>
-              <button
-                class="p-2 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary transition-all"><span
-                  class="material-symbols-outlined">view_list</span></button>
-            </div>
+      <section id="services" class="bg-white px-6 py-20 dark:bg-background-dark/50">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-16 flex flex-col items-center text-center">
+            <h2 class="mb-4 text-3xl font-bold text-slate-900 dark:text-white">Dịch Vụ Của Chúng Tôi</h2>
+            <div class="h-1.5 w-20 rounded-full bg-primary"></div>
+            <p class="mt-6 max-w-2xl text-slate-600 dark:text-slate-400">Chúng tôi cung cấp hệ sinh thái dịch vụ phòng
+              cháy chữa cháy khép kín, từ tư vấn thiết kế đến bảo trì vận hành.</p>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <div
-              class="group bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 relative overflow-hidden">
-              <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity"><span
-                  class="material-symbols-outlined text-8xl">clinical_notes</span></div>
+              class="group relative flex flex-col rounded-2xl border border-slate-100 bg-slate-50 p-8 transition-all hover:border-primary/20 hover:bg-white hover:shadow-xl dark:border-slate-800 dark:bg-slate-900/50">
               <div
-                class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                <span class="material-symbols-outlined text-3xl">clinical_notes</span></div>
-              <h3 class="text-xl font-bold mb-3 dark:text-white">Tư vấn an toàn cháy nổ</h3>
-              <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">Đánh giá rủi ro và kiểm toán tuân thủ chuyên nghiệp, đảm bảo cơ sở của bạn đáp ứng quy định an toàn quốc gia và yêu cầu bảo hiểm.</p>
-              <button class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">Xem thêm <span
-                  class="material-symbols-outlined text-sm">arrow_forward</span></button>
+                class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                <span class="material-symbols-outlined text-3xl">chat_bubble</span>
+              </div>
+              <h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">Tư Vấn PCCC</h3>
+              <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Khảo sát, thẩm định và đưa ra giải
+                pháp tối ưu cho từng loại công trình cụ thể.</p>
+              <a class="mt-6 flex items-center gap-2 text-sm font-bold text-primary" href="index.html#services">Xem chi
+                tiết <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
             </div>
             <div
-              class="group bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 relative overflow-hidden">
-              <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity"><span
-                  class="material-symbols-outlined text-8xl">architecture</span></div>
+              class="group relative flex flex-col rounded-2xl border border-slate-100 bg-slate-50 p-8 transition-all hover:border-primary/20 hover:bg-white hover:shadow-xl dark:border-slate-800 dark:bg-slate-900/50">
               <div
-                class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                <span class="material-symbols-outlined text-3xl">architecture</span></div>
-              <h3 class="text-xl font-bold mb-3 dark:text-white">Thiết kế &amp; Kỹ thuật hệ thống</h3>
-              <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">Thiết kế chữa cháy và phát hiện cháy tùy chỉnh, sử dụng BIM và tính toán thủy lực tiên tiến cho hiệu suất tối ưu.</p>
-              <button class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">Xem thêm <span
-                  class="material-symbols-outlined text-sm">arrow_forward</span></button>
+                class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                <span class="material-symbols-outlined text-3xl">build</span>
+              </div>
+              <h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">Lắp Đặt Hệ Thống</h3>
+              <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Thi công chuyên nghiệp, đúng tiến độ
+                và đảm bảo các tiêu chuẩn kỹ thuật khắt khe.</p>
+              <a class="mt-6 flex items-center gap-2 text-sm font-bold text-primary" href="index.html#services">Xem chi
+                tiết <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
             </div>
             <div
-              class="group bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 relative overflow-hidden">
-              <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity"><span
-                  class="material-symbols-outlined text-8xl">box</span></div>
+              class="group relative flex flex-col rounded-2xl border border-slate-100 bg-slate-50 p-8 transition-all hover:border-primary/20 hover:bg-white hover:shadow-xl dark:border-slate-800 dark:bg-slate-900/50">
               <div
-                class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                <span class="material-symbols-outlined text-3xl">box</span></div>
-              <h3 class="text-xl font-bold mb-3 dark:text-white">Cung cấp thiết bị</h3>
-              <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">Bộ sưu tập bình chữa cháy, đầu phun và hệ thống báo cháy thông minh đạt chứng nhận UL/FM từ nhà sản xuất hàng đầu.</p>
-              <button class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">Xem thêm <span
-                  class="material-symbols-outlined text-sm">arrow_forward</span></button>
+                class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                <span class="material-symbols-outlined text-3xl">shield</span>
+              </div>
+              <h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">Bảo Trì Định Kỳ</h3>
+              <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Kiểm tra, bảo dưỡng định kỳ để hệ
+                thống luôn sẵn sàng hoạt động trong mọi tình huống.</p>
+              <a class="mt-6 flex items-center gap-2 text-sm font-bold text-primary" href="index.html#services">Xem chi
+                tiết <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
             </div>
             <div
-              class="group bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 relative overflow-hidden">
-              <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity"><span
-                  class="material-symbols-outlined text-8xl">engineering</span></div>
+              class="group relative flex flex-col rounded-2xl border border-slate-100 bg-slate-50 p-8 transition-all hover:border-primary/20 hover:bg-white hover:shadow-xl dark:border-slate-800 dark:bg-slate-900/50">
               <div
-                class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                <span class="material-symbols-outlined text-3xl">engineering</span></div>
-              <h3 class="text-xl font-bold mb-3 dark:text-white">Bảo trì &amp; Kiểm định</h3>
-              <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">Hỗ trợ kỹ thuật 24/7 và chương trình bảo trì phòng ngừa định kỳ để hệ thống luôn sẵn sàng hoạt động.</p>
-              <button class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">Xem thêm <span
-                  class="material-symbols-outlined text-sm">arrow_forward</span></button>
-            </div>
-            <div
-              class="group bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 relative overflow-hidden">
-              <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity"><span
-                  class="material-symbols-outlined text-8xl">construction</span></div>
-              <div
-                class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                <span class="material-symbols-outlined text-3xl">construction</span></div>
-              <h3 class="text-xl font-bold mb-3 dark:text-white">Thi công phòng cháy chữa cháy</h3>
-              <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">Dịch vụ lắp đặt trọn gói và quản lý dự án do kỹ sư có chứng chỉ đảm nhiệm cho công trình dân dụng, thương mại và công nghiệp.</p>
-              <button class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">Xem thêm <span
-                  class="material-symbols-outlined text-sm">arrow_forward</span></button>
-            </div>
-            <div
-              class="group bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 relative overflow-hidden">
-              <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity"><span
-                  class="material-symbols-outlined text-8xl">school</span></div>
-              <div
-                class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                <span class="material-symbols-outlined text-3xl">school</span></div>
-              <h3 class="text-xl font-bold mb-3 dark:text-white">Đào tạo &amp; Huấn luyện</h3>
-              <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">Trang bị cho nhân viên diễn tập PCCC, sử dụng bình chữa cháy và quy trình thoát nạn khẩn cấp.</p>
-              <button class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">Xem thêm <span
-                  class="material-symbols-outlined text-sm">arrow_forward</span></button>
+                class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                <span class="material-symbols-outlined text-3xl">fire_extinguisher</span>
+              </div>
+              <h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">Thiết Bị PCCC</h3>
+              <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Cung cấp vật tư, thiết bị phòng cháy
+                chữa cháy chính hãng, đầy đủ CO/CQ.</p>
+              <a class="mt-6 flex items-center gap-2 text-sm font-bold text-primary" href="index.html#services">Xem chi
+                tiết <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- CTA/Contact Section -->
-      <section class="py-24 bg-slate-900 text-white relative overflow-hidden">
-        <div class="absolute bottom-0 right-0 w-1/3 h-1/3 bg-primary/20 blur-[120px] rounded-full"></div>
-        <div class="container mx-auto px-4 lg:px-40 relative z-10">
-          <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <!-- Featured Projects -->
+      <section class="bg-background-light px-6 py-20 dark:bg-background-dark">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
-              <h2 class="text-4xl font-black mb-6">Cần kế hoạch an toàn cháy nổ riêng?</h2>
-              <p class="text-slate-400 text-lg mb-8 leading-relaxed">Chuyên gia của chúng tôi sẵn sàng phân tích yêu cầu dự án. Liên hệ ngay để được tư vấn ban đầu miễn phí và báo giá dịch vụ chi tiết.</p>
-              <div class="space-y-4">
-                <div class="flex items-center gap-4">
-                  <span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">call</span>
-                  <div>
-                    <p class="text-sm text-slate-400">Gọi đường dây nóng 24/7</p>
-                    <p class="font-bold">+84 (0) 123 456 789</p>
-                  </div>
-                </div>
-                <div class="flex items-center gap-4">
-                  <span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">mail</span>
-                  <div>
-                    <p class="text-sm text-slate-400">Email đội hỗ trợ</p>
-                    <p class="font-bold">contact@fcbvn.safety.vn</p>
-                  </div>
+              <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Dự Án Tiêu Biểu</h2>
+              <p class="mt-4 text-slate-600 dark:text-slate-400">Những công trình quy mô chúng tôi đã thực hiện trên
+                toàn quốc.</p>
+            </div>
+            <a href="projects.html"
+              class="text-sm font-bold text-primary underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Xem
+              tất cả dự án</a>
+          </div>
+          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="group overflow-hidden rounded-2xl bg-white shadow-sm dark:bg-slate-900">
+              <div class="aspect-[16/10] overflow-hidden">
+                <div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                  style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBh4AUaWaIpEl597OAaR5rMXeWbtrKVckIMdKHYUCPpCua8jTQSjNYQuOxm8L_2wSqP8LsMvRJ2K-Ij8QEASbbPgo6S3JY6-1AwLhz_WY8SuRzZOml59yNzd1yIWKOZ6jmPOiLCkR7HyOCo_EMIXgMJpcizBdp7bT8HSb7bnL9wEJC7x-ODu4sTFhfC9aTS9sZJt2_ELhQKb_IMO2vammPrwTOk2c6nmje88fuul4xnZN-GXcyBWRVLHMI8nwHB99nyMpd186GnZjM')">
                 </div>
               </div>
+              <div class="p-6">
+                <div class="mb-2 text-xs font-bold uppercase tracking-wider text-primary">Căn hộ cao cấp</div>
+                <h4 class="mb-4 text-lg font-bold text-slate-900 dark:text-white">Chung Cư Cao Cấp Landmark 81</h4>
+                <div class="flex items-center gap-2 text-sm text-slate-500"><span
+                    class="material-symbols-outlined text-sm">location_on</span> TP. Hồ Chí Minh</div>
+              </div>
             </div>
-            <div class="bg-white dark:bg-slate-800 p-8 md:p-10 rounded-2xl shadow-2xl">
-              <form class="space-y-4" action="contact.html" method="get">
-                <div class="grid grid-cols-2 gap-4">
-                  <div class="space-y-2">
-                    <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Họ và tên</label>
-                    <input
-                      class="w-full bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 rounded-lg p-3 text-slate-900 dark:text-white focus:ring-primary focus:border-primary"
-                      placeholder="Nguyễn Văn A" type="text" name="name" />
-                  </div>
-                  <div class="space-y-2">
-                    <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Email</label>
-                    <input
-                      class="w-full bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 rounded-lg p-3 text-slate-900 dark:text-white focus:ring-primary focus:border-primary"
-                      placeholder="email@congty.com" type="email" name="email" />
-                  </div>
+            <div class="group overflow-hidden rounded-2xl bg-white shadow-sm dark:bg-slate-900">
+              <div class="aspect-[16/10] overflow-hidden">
+                <div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                  style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfpsrv8U5pUrGs3z3Sv20_Q66wYm9l7-ZjbNGwH2q6dUNVb9v-J8Mc4BFAt1HZGDoree47obEmpxLf-acSXyR0rn0j0dOK8puerjK4Qrz8ZyTVeHz_M_XDsjYLGI5yepqKY6TOwL2EC6kG6jQO5ieychXXTwTKpzvj7VlPR8GPgaK2eWMAogQx1sKwjNl71PIAzBoDkaydzCkg5WIjAokwI7Os6aCvf8LejmIIiagfXaQ26Pxg0WZc6xUfe51cPx52CaqHpWTGxvQ')">
                 </div>
-                <div class="space-y-2">
-                  <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Dịch vụ quan tâm</label>
-                  <select
-                    class="w-full bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 rounded-lg p-3 text-slate-900 dark:text-white focus:ring-primary focus:border-primary"
-                    name="service">
-                    <option>Tư vấn an toàn cháy nổ</option>
-                    <option>Thiết kế &amp; Kỹ thuật hệ thống</option>
-                    <option>Bảo trì &amp; Kiểm định</option>
-                    <option>Cung cấp thiết bị</option>
-                  </select>
+              </div>
+              <div class="p-6">
+                <div class="mb-2 text-xs font-bold uppercase tracking-wider text-primary">Công nghiệp</div>
+                <h4 class="mb-4 text-lg font-bold text-slate-900 dark:text-white">Nhà Máy Samsung Thái Nguyên</h4>
+                <div class="flex items-center gap-2 text-sm text-slate-500"><span
+                    class="material-symbols-outlined text-sm">location_on</span> Thái Nguyên</div>
+              </div>
+            </div>
+            <div class="group overflow-hidden rounded-2xl bg-white shadow-sm dark:bg-slate-900">
+              <div class="aspect-[16/10] overflow-hidden">
+                <div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                  style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDenjvf9kWc5twI2n7AoE0X-tZCgN5sAGlY86BkRQ7IZDj1EKZIviLdptRRaFf9mrWYehcWuVxyt8RqVTk9BRTb_StiBhVmeVO8xwGjXTD9Xiab8tOJe-pqNbEDunV-ZlqLjDAz2FbgpDzUAYPQ04QP4bmJI9ToAIxj9e6xCqBpXGw8mKAW_zAaNmo7kWf7lGQ7jRsuhw5EgYc5WfNLZo7bXDlKQ2VvEL9vJslXBw-1arrlGO5D2lgMl5B8sIYSG-U6L5ItRPtxiG4')">
                 </div>
-                <div class="space-y-2">
-                  <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Nội dung dự án</label>
-                  <textarea
-                    class="w-full bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 rounded-lg p-3 text-slate-900 dark:text-white focus:ring-primary focus:border-primary"
-                    placeholder="Mô tả yêu cầu của bạn..." rows="4" name="details"></textarea>
+              </div>
+              <div class="p-6">
+                <div class="mb-2 text-xs font-bold uppercase tracking-wider text-primary">Thương mại</div>
+                <h4 class="mb-4 text-lg font-bold text-slate-900 dark:text-white">Trung Tâm Thương Mại AEON Mall</h4>
+                <div class="flex items-center gap-2 text-sm text-slate-500"><span
+                    class="material-symbols-outlined text-sm">location_on</span> Hà Đông, Hà Nội</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- News Section -->
+      <section class="bg-white px-6 py-20 dark:bg-background-dark/50">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-12 flex items-center justify-between">
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Tin Tức PCCC</h2>
+            <a href="news.html" class="flex items-center gap-2 font-bold text-slate-600 dark:text-slate-400">Tất cả bài
+              viết <span class="material-symbols-outlined">chevron_right</span></a>
+          </div>
+          <div class="grid gap-10 lg:grid-cols-2">
+            <div class="flex flex-col gap-6 md:flex-row">
+              <div class="h-48 w-full shrink-0 overflow-hidden rounded-xl md:w-64">
+                <div class="h-full w-full bg-cover bg-center"
+                  style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPzhHmBd9y6Q39-ECMeYOos3-AwGM4MB4NyhsUNDv0NUv2pumsN57sUFqYUMDXEAWXdZ2ZMziLnVxjefw8q6BZFDf52IiepW4ukrhRo6mLmedvh0vlVcEcZVGEzkBzq5FoYaJFxkwX4UmONvOwd93edzAAJRK0SUzV1taV9wjURM7IpubakjWDvMlc_ppD9tzWRySWhL2SmNb-Rk3-Jbq8a0yNmAmZZ28WyagTrle4s5-c2OOzMmDEMe4N9CCJtZ1Aws4Lr-UNnu0')">
                 </div>
-                <button
-                  class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all"
-                  type="submit">Gửi yêu cầu</button>
-              </form>
+              </div>
+              <div class="flex flex-col justify-center">
+                <div class="mb-2 text-xs font-semibold text-slate-500">12 Tháng 5, 2024</div>
+                <a href="news.html" class="mb-3 text-xl font-bold text-slate-900 dark:text-white hover:text-primary">Quy
+                  định mới về thẩm duyệt PCCC năm 2024</a>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Cập nhật những thay đổi quan trọng trong nghị định
+                  mới về công tác phòng cháy chữa cháy...</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-6 md:flex-row">
+              <div class="h-48 w-full shrink-0 overflow-hidden rounded-xl md:w-64">
+                <div class="h-full w-full bg-cover bg-center"
+                  style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBP1Fy61swX5akJQLbvYjiJSWNZfCqJozH1AsoHyoIZPDNCaOJ6FtNPYlP_kfu3d-Y_ceIwFxfGjWc_8tJ9ObASVJSmleYab8XLLCTw8lFchBwWPyisHJhCHfQD4YxfQPXPsqaSyWO9zv7q22ZUXI-zXMOnSb1sq4brfOuJ1nYOpnx9lZe5RVuxw3jj0gNCjqMgXEoa5L5RtHSIboChbPgpHR1_JZPd068SDMMaSA2pRBoC2BZvGdR9IqtiZa-LvsPFzXowMIvohmc')">
+                </div>
+              </div>
+              <div class="flex flex-col justify-center">
+                <div class="mb-2 text-xs font-semibold text-slate-500">08 Tháng 5, 2024</div>
+                <a href="news.html" class="mb-3 text-xl font-bold text-slate-900 dark:text-white hover:text-primary">Tập
+                  huấn kỹ năng thoát nạn cho cư dân chung cư</a>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Các bước xử lý tình huống khẩn cấp và cách sử dụng
+                  bình chữa cháy cầm tay hiệu quả...</p>
+              </div>
             </div>
           </div>
         </div>
@@ -227,6 +276,58 @@
   </div>
   <script src="js/components.js"></script>
   <script>FCBVN.renderHeader('home'); FCBVN.renderFooter();</script>
+  <script>
+    (function () {
+      var els = document.querySelectorAll('[data-countup]');
+      if (!els.length) return;
+
+      var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function setFinal(el) {
+        var target = Number(el.getAttribute('data-countup') || '0');
+        var suffix = el.getAttribute('data-suffix') || '';
+        el.textContent = target.toLocaleString('vi-VN') + suffix;
+      }
+
+      function animate(el) {
+        var target = Number(el.getAttribute('data-countup') || '0');
+        var suffix = el.getAttribute('data-suffix') || '';
+        var duration = Number(el.getAttribute('data-duration') || '1200');
+        var startTime = performance.now();
+
+        function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+        function frame(now) {
+          var t = Math.min(1, (now - startTime) / duration);
+          var value = Math.floor(target * easeOutCubic(t));
+          if (target >= 1) value = Math.max(1, value);
+          el.textContent = value.toLocaleString('vi-VN') + suffix;
+          if (t < 1) requestAnimationFrame(frame);
+        }
+
+        requestAnimationFrame(frame);
+      }
+
+      if (prefersReduced) {
+        els.forEach(setFinal);
+        return;
+      }
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          animate(entry.target);
+          io.unobserve(entry.target);
+        });
+      }, { threshold: 0.4 });
+
+      els.forEach(function (el) {
+        var suffix = el.getAttribute('data-suffix') || '';
+        el.textContent = '1' + suffix;
+        io.observe(el);
+      });
+    })();
+  </script>
 </body>
 
 </html>

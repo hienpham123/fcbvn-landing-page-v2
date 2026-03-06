@@ -4,90 +4,122 @@
  * sau khi DOM đã load (hoặc đặt script ở cuối body).
  */
 var FCBVN = (function () {
-  var activeNav = 'text-primary text-sm font-semibold underline decoration-2 underline-offset-4';
-  var inactiveNav = 'text-slate-700 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors';
+  var activeNav = 'text-sm font-semibold text-primary';
+  var inactiveNav = 'text-sm font-medium transition-colors hover:text-primary';
+  var mobileActiveNav = 'block rounded-lg px-3 py-2 text-sm font-semibold text-primary bg-primary/10';
+  var mobileInactiveNav = 'block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-primary/5 dark:hover:bg-slate-800/60 hover:text-primary transition-colors';
 
   function navClass(page, current) {
     return page === current ? activeNav : inactiveNav;
   }
 
+  function navClassMobile(page, current) {
+    return page === current ? mobileActiveNav : mobileInactiveNav;
+  }
+
   function getHeader(currentPage) {
     return (
-      '<header class="fixed top-0 left-0 right-0 z-50 w-full bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm">' +
-        '<div class="container mx-auto px-4 lg:px-40 py-4 flex items-center justify-between">' +
-          '<div class="flex items-center gap-8">' +
-            '<a href="index.html" class="flex items-center gap-2 text-primary">' +
-              '<span class="material-symbols-outlined text-3xl font-bold">fire_truck</span>' +
-              '<h2 class="text-slate-900 dark:text-slate-100 text-xl font-black leading-tight tracking-tighter">FCBVN</h2>' +
+      '<header class="fixed top-0 z-50 w-full border-b border-primary/10 bg-background-light/95 backdrop-blur-md dark:bg-background-dark/95">' +
+        '<div class="mx-auto relative z-[60] flex max-w-7xl items-center justify-between px-6 py-4">' +
+          '<div class="flex items-center gap-10">' +
+            '<a class="flex items-center gap-3" href="index.html">' +
+              '<div class="flex h-10 w-10 items-center justify-center rounded-lg overflow-hidden  ring-slate-200 dark:ring-slate-700">' +
+                '<img src="images/logo.svg" alt="FCBVN" class="h-10 w-10 object-contain" />' +
+              '</div>' +
+              '<h1 class="text-2xl font-black tracking-tight text-slate-900 dark:text-slate-100">FCBVN</h1>' +
             '</a>' +
-            '<nav class="hidden md:flex items-center gap-8">' +
-              '<a class="' + navClass('home', currentPage) + '" href="index.html">Trang chủ</a>' +
-              '<a class="' + navClass('services', currentPage) + '" href="index.html#services">Dịch vụ</a>' +
-              '<a class="' + navClass('projects', currentPage) + '" href="projects.html">Dự án</a>' +
-              '<a class="' + navClass('about', currentPage) + '" href="about.html">Về chúng tôi</a>' +
-              '<a class="' + navClass('news', currentPage) + '" href="news.html">Tin tức</a>' +
-              '<a class="' + navClass('contact', currentPage) + '" href="contact.html">Liên hệ</a>' +
+            '<nav class="hidden items-center gap-6 lg:flex">' +
+              '<a class="' + navClass('home', currentPage) + '" href="index.html">Trang Chủ</a>' +
+              '<a class="' + navClass('about', currentPage) + '" href="about.html">Giới Thiệu</a>' +
+              '<a class="' + navClass('services', currentPage) + '" href="index.html#services">Dịch Vụ</a>' +
+              '<a class="' + navClass('projects', currentPage) + '" href="projects.html">Dự Án</a>' +
+              '<a class="' + navClass('news', currentPage) + '" href="news.html">Tin Tức</a>' +
+              '<a class="' + navClass('contact', currentPage) + '" href="contact.html">Liên Hệ</a>' +
             '</nav>' +
           '</div>' +
           '<div class="flex items-center gap-4">' +
-            '<div class="hidden lg:flex relative">' +
+            '<div class="relative hidden sm:block">' +
               '<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>' +
-              '<input class="pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm focus:ring-2 focus:ring-primary w-64 text-slate-900 dark:text-slate-100 placeholder:text-slate-400" placeholder="Tìm kiếm..." type="text"/>' +
+              '<input class="h-10 w-48 rounded-lg border-none bg-primary/5 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/20 dark:text-white xl:w-64" placeholder="Tìm kiếm giải pháp..." type="text"/>' +
             '</div>' +
-            '<a href="contact.html" class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20">Nhận báo giá</a>' +
+            '<a href="contact.html#form" class="hidden rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white transition-all hover:bg-primary/90 md:block">Liên hệ tư vấn</a>' +
+            '<button id="fcbvn-mobile-menu-button" class="flex h-10 w-10 items-center justify-center rounded-lg text-slate-900 dark:text-white lg:hidden" type="button" aria-label="Menu" aria-controls="fcbvn-mobile-menu" aria-expanded="false">' +
+              '<span class="material-symbols-outlined">menu</span>' +
+            '</button>' +
+          '</div>' +
+        '</div>' +
+        '<div id="fcbvn-mobile-menu-overlay" class="hidden lg:hidden fixed inset-0 z-40 bg-slate-900/40 backdrop-blur-[2px]" aria-hidden="true"></div>' +
+        '<div id="fcbvn-mobile-menu" class="hidden lg:hidden fixed left-0 right-0 top-20 z-50 border-b border-primary/10 bg-background-light/95 dark:bg-background-dark/95 shadow-xl max-h-[calc(100vh-5rem)] overflow-auto">' +
+          '<div class="mx-auto max-w-7xl px-6 py-4 flex flex-col gap-2">' +
+            '<a class="' + navClassMobile('home', currentPage) + '" href="index.html">Trang Chủ</a>' +
+            '<a class="' + navClassMobile('about', currentPage) + '" href="about.html">Giới Thiệu</a>' +
+            '<a class="' + navClassMobile('services', currentPage) + '" href="index.html#services">Dịch Vụ</a>' +
+            '<a class="' + navClassMobile('projects', currentPage) + '" href="projects.html">Dự Án</a>' +
+            '<a class="' + navClassMobile('news', currentPage) + '" href="news.html">Tin Tức</a>' +
+            '<a class="' + navClassMobile('contact', currentPage) + '" href="contact.html">Liên Hệ</a>' +
+            '<div class="pt-3 mt-2 border-t border-primary/10 flex flex-col gap-3">' +
+              '<a href="contact.html#form" class="rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white text-center hover:bg-primary/90 transition-all">Liên hệ tư vấn</a>' +
+            '</div>' +
           '</div>' +
         '</div>' +
       '</header>' +
-      '<div class="h-16 flex-none" aria-hidden="true"></div>'
+      '<div class="h-20 flex-none" aria-hidden="true"></div>'
     );
   }
 
   function getFooter() {
     return (
-      '<footer class="bg-slate-100 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">' +
-        '<div class="container mx-auto px-4 lg:px-40">' +
-          '<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">' +
-            '<div>' +
-              '<a href="index.html" class="flex items-center gap-2 text-primary mb-6">' +
-                '<span class="material-symbols-outlined text-3xl font-bold">fire_truck</span>' +
-                '<h2 class="text-slate-900 dark:text-slate-100 text-xl font-black leading-tight tracking-tighter">FCBVN</h2>' +
-              '</a>' +
-              '<p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Dẫn đầu ngành với giải pháp phòng cháy chữa cháy hiện đại từ năm 1998. Cam kết xuất sắc và an toàn tính mạng.</p>' +
+      '<footer class="bg-slate-900 px-6 py-16 text-slate-300">' +
+        '<div class="mx-auto max-w-7xl">' +
+          '<div class="grid gap-12 lg:grid-cols-4">' +
+            '<div class="col-span-full lg:col-span-1">' +
+              '<div class="mb-6 flex items-center gap-3">' +
+                '<a class="flex items-center gap-3" href="index.html" aria-label="Trang chủ FCBVN">' +
+                  '<div class="flex h-10 w-10 items-center justify-center rounded-lg  overflow-hidden ring-white/10">' +
+                    '<img src="images/logo.svg" alt="FCBVN" class="h-10 w-10 object-contain" />' +
+                  '</div>' +
+                  '<h2 class="text-2xl font-black text-white">FCBVN</h2>' +
+                '</a>' +
+              '</div>' +
+              '<p class="mb-8 text-sm leading-relaxed">FCBVN tự hào là đơn vị tiên phong trong lĩnh vực phòng cháy chữa cháy tại Việt Nam, mang lại sự an tâm tuyệt đối cho khách hàng qua từng dự án.</p>' +
               '<div class="flex gap-4">' +
-                '<a class="w-10 h-10 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all" href="#" aria-label="Share"><span class="material-symbols-outlined text-lg">share</span></a>' +
-                '<a class="w-10 h-10 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all" href="#" aria-label="Link"><span class="material-symbols-outlined text-lg">public</span></a>' +
+                '<a class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-primary transition-colors" href="#" aria-label="Facebook">' +
+                  '<svg class="h-5 w-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>' +
+                '</a>' +
+                '<a class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-primary transition-colors" href="#" aria-label="YouTube">' +
+                  '<svg class="h-5 w-5 fill-current" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 4-8 4z"></path></svg>' +
+                '</a>' +
               '</div>' +
             '</div>' +
             '<div>' +
-              '<h4 class="font-bold text-slate-900 dark:text-white mb-6">Liên kết nhanh</h4>' +
-              '<ul class="space-y-4 text-slate-600 dark:text-slate-400">' +
-                '<li><a class="hover:text-primary transition-colors" href="index.html">Trang chủ</a></li>' +
-                '<li><a class="hover:text-primary transition-colors" href="index.html#services">Tất cả dịch vụ</a></li>' +
-                '<li><a class="hover:text-primary transition-colors" href="projects.html">Dự án của chúng tôi</a></li>' +
-                '<li><a class="hover:text-primary transition-colors" href="about.html">Tuyển dụng</a></li>' +
+              '<h3 class="mb-6 text-lg font-bold text-white">Văn phòng Hà Nội</h3>' +
+              '<ul class="flex flex-col gap-4 text-sm">' +
+                '<li class="flex gap-3"><span class="material-symbols-outlined text-primary text-lg">location_on</span><span>Số 123 Phố Duy Tân, Cầu Giấy, Hà Nội</span></li>' +
+                '<li class="flex gap-3"><span class="material-symbols-outlined text-primary text-lg">call</span><span>(024) 3456 7890</span></li>' +
+                '<li class="flex gap-3"><span class="material-symbols-outlined text-primary text-lg">mail</span><span>hanoi@fcbvn.com</span></li>' +
               '</ul>' +
             '</div>' +
             '<div>' +
-              '<h4 class="font-bold text-slate-900 dark:text-white mb-6">Hỗ trợ</h4>' +
-              '<ul class="space-y-4 text-slate-600 dark:text-slate-400">' +
-                '<li><a class="hover:text-primary transition-colors" href="contact.html">Yêu cầu hỗ trợ</a></li>' +
-                '<li><a class="hover:text-primary transition-colors" href="#">Chính sách bảo mật</a></li>' +
-                '<li><a class="hover:text-primary transition-colors" href="#">Điều khoản dịch vụ</a></li>' +
-                '<li><a class="hover:text-primary transition-colors" href="#">Câu hỏi thường gặp</a></li>' +
+              '<h3 class="mb-6 text-lg font-bold text-white">Văn phòng TP.HCM</h3>' +
+              '<ul class="flex flex-col gap-4 text-sm">' +
+                '<li class="flex gap-3"><span class="material-symbols-outlined text-primary text-lg">location_on</span><span>Tòa nhà AB, Quận 1, TP. Hồ Chí Minh</span></li>' +
+                '<li class="flex gap-3"><span class="material-symbols-outlined text-primary text-lg">call</span><span>(028) 9876 5432</span></li>' +
+                '<li class="flex gap-3"><span class="material-symbols-outlined text-primary text-lg">mail</span><span>hcmc@fcbvn.com</span></li>' +
               '</ul>' +
             '</div>' +
             '<div>' +
-              '<h4 class="font-bold text-slate-900 dark:text-white mb-6">Trụ sở chính</h4>' +
-              '<p class="text-slate-600 dark:text-slate-400 leading-relaxed">123 Đường An toàn, Quận 1<br/>Thành phố Hồ Chí Minh, Việt Nam</p>' +
-              '<a class="inline-flex items-center gap-2 text-slate-900 dark:text-slate-200 hover:text-primary mt-2" href="#"><span class="material-symbols-outlined text-sm">location_on</span> Xem trên Google Maps</a>' +
+              '<h3 class="mb-6 text-lg font-bold text-white">Liên kết nhanh</h3>' +
+              '<ul class="flex flex-col gap-3 text-sm">' +
+                '<li><a class="hover:text-white" href="index.html#services">Quy trình dịch vụ</a></li>' +
+                '<li><a class="hover:text-white" href="contact.html#form">Báo giá thiết bị</a></li>' +
+                '<li><a class="hover:text-white" href="about.html">Tuyển dụng</a></li>' +
+                '<li><a class="hover:text-white" href="#">Chính sách bảo hành</a></li>' +
+                '<li><a class="hover:text-white" href="contact.html">Tư vấn kỹ thuật</a></li>' +
+              '</ul>' +
             '</div>' +
           '</div>' +
-          '<div class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500 dark:text-slate-500">' +
-            '<p>© 2024 FCBVN Dịch vụ Phòng cháy chữa cháy. Bảo lưu mọi quyền.</p>' +
-            '<div class="flex gap-8">' +
-              '<a class="hover:text-primary transition-colors" href="#">Chứng nhận ISO 9001</a>' +
-              '<a class="hover:text-primary transition-colors" href="#">Thành viên NFPA</a>' +
-            '</div>' +
+          '<div class="mt-16 border-t border-white/10 pt-8 text-center text-xs">' +
+            '<p>© 2024 FCBVN - Công ty CP Phòng Cháy Chữa Cháy Việt Nam. Bảo lưu mọi quyền.</p>' +
           '</div>' +
         '</div>' +
       '</footer>'
@@ -96,7 +128,44 @@ var FCBVN = (function () {
 
   function renderHeader(currentPage) {
     var el = document.getElementById('site-header');
-    if (el) el.innerHTML = getHeader(currentPage || 'home');
+    if (!el) return;
+
+    el.innerHTML = getHeader(currentPage || 'home');
+
+    var button = document.getElementById('fcbvn-mobile-menu-button');
+    var menu = document.getElementById('fcbvn-mobile-menu');
+    var overlay = document.getElementById('fcbvn-mobile-menu-overlay');
+
+    if (!button || !menu || !overlay) return;
+
+    function setOpen(isOpen) {
+      if (isOpen) {
+        menu.classList.remove('hidden');
+        overlay.classList.remove('hidden');
+        button.setAttribute('aria-expanded', 'true');
+        document.documentElement.style.overflow = 'hidden';
+      } else {
+        menu.classList.add('hidden');
+        overlay.classList.add('hidden');
+        button.setAttribute('aria-expanded', 'false');
+        document.documentElement.style.overflow = '';
+      }
+    }
+
+    function toggle() {
+      var isOpen = button.getAttribute('aria-expanded') === 'true';
+      setOpen(!isOpen);
+    }
+
+    button.addEventListener('click', toggle);
+    overlay.addEventListener('click', function () { setOpen(false); });
+    menu.addEventListener('click', function (e) {
+      var target = e.target;
+      if (target && target.tagName === 'A') setOpen(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setOpen(false);
+    });
   }
 
   function renderFooter() {
