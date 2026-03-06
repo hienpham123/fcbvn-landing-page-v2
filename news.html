@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FCBVN – Tin tức PCCC &amp; Kiến thức An toàn</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#f20d0d",
+          "background-light": "#f8f5f5",
+          "background-dark": "#221010",
+        },
+        fontFamily: { "display": ["Public Sans", "sans-serif"] },
+        borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+      },
+    },
+  };
+</script>
+<style>
+  body { font-family: 'Public Sans', sans-serif; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+  <div id="site-header"></div>
+
+  <main class="flex-1 justify-center py-8 md:py-12">
+    <div class="max-w-[1200px] w-full mx-auto px-4 lg:px-8">
+      <!-- Hero Section -->
+      <div class="flex flex-col gap-4 mb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider w-fit">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+          </span>
+          Cập nhật mới nhất
+        </div>
+        <h1 class="text-slate-900 dark:text-slate-100 text-4xl md:text-5xl font-black leading-tight tracking-tight max-w-2xl">Tin tức PCCC &amp; <span class="text-primary">Kiến thức An toàn</span></h1>
+        <p class="text-slate-600 dark:text-slate-400 text-lg max-w-xl">Cập nhật quy định ngành, quy trình an toàn từ chuyên gia và tin công ty từ đơn vị dẫn đầu phòng cháy chữa cháy.</p>
+      </div>
+
+      <!-- Filter & Search Bar -->
+      <div class="flex flex-col md:flex-row items-center gap-4 mb-8">
+        <div class="w-full md:flex-1">
+          <div class="relative group">
+            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+            <input class="w-full h-14 pl-12 pr-4 rounded-xl bg-white dark:bg-background-dark border-2 border-slate-200 dark:border-slate-800 focus:border-primary focus:ring-0 transition-all text-slate-900 dark:text-slate-100 shadow-sm" placeholder="Tìm bài viết, mẹo hay cập nhật ngành..." type="text"/>
+          </div>
+        </div>
+        <div class="flex gap-2 w-full md:w-auto overflow-x-auto pb-2 md:pb-0">
+          <button class="whitespace-nowrap px-5 py-2.5 rounded-xl bg-primary text-white font-bold text-sm shadow-md shadow-primary/20 transition-all">Tất cả bài viết</button>
+          <button class="whitespace-nowrap px-5 py-2.5 rounded-xl bg-white dark:bg-background-dark text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800 font-semibold text-sm hover:border-primary hover:text-primary transition-all">Mẹo an toàn</button>
+          <button class="whitespace-nowrap px-5 py-2.5 rounded-xl bg-white dark:bg-background-dark text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800 font-semibold text-sm hover:border-primary hover:text-primary transition-all">Tin công ty</button>
+          <button class="whitespace-nowrap px-5 py-2.5 rounded-xl bg-white dark:bg-background-dark text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800 font-semibold text-sm hover:border-primary hover:text-primary transition-all">Công nghiệp</button>
+        </div>
+      </div>
+
+      <!-- Masonry-style Grid -->
+      <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+        <div class="break-inside-avoid group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300">
+          <div class="relative overflow-hidden aspect-[4/3]">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Fire alarm system" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmTYJAfLjXEjaOVYNlBpK8B-Y2eHQ2tdvnK6-IQWKi67lHyHfv3nB17bk0-8b6dSzBIXrNoOlOcyeouFcYUkAYWbZcHB07AzeT4FmNbFUALtE4OtS2qNSQcz6txqxmmEKh6DapIwk-1W7KHCebOOBdIunMtx5Roq-uq397o4GBir0ju2zdPGB6efZLEQHdqC41CFxLQpEbAcL-lzUm2tNZ5Bi-SnI1A6nNvWO5m1W9tqDgYXPIpZZb_7mmqL90mX2gNncSjpAVEYg"/>
+            <div class="absolute top-4 left-4"><span class="px-3 py-1 bg-primary text-white text-[10px] font-bold uppercase rounded-lg">Mẹo an toàn</span></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 text-slate-400 text-xs mb-3"><span class="material-symbols-outlined text-sm">calendar_today</span><span>Oct 24, 2023</span><span class="mx-1">•</span><span>5 phút đọc</span></div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 leading-snug mb-3 group-hover:text-primary transition-colors">Quy trình an toàn cháy nổ cần thiết cho chung cư cao tầng</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">Bảo vệ nhà nhiều tầng cần thiết bị chuyên dụng và chiến lược thoát nạn mà mọi cư dân nên biết...</p>
+            <a class="inline-flex items-center text-primary font-bold text-sm gap-1 hover:gap-2 transition-all" href="#">Đọc bài <span class="material-symbols-outlined text-lg">arrow_right_alt</span></a>
+          </div>
+        </div>
+        <div class="break-inside-avoid group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300">
+          <div class="relative overflow-hidden aspect-[16/9]">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Engineers inspecting fire suppression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8igOQEsppCCKsT_ZXznM61ncLSiZ6GXquxBsLhVW-0qHa_N3VDE58fHl33yDjqWG80jAt88Q7qv4e3g_oWwXYOqY5ZwPb9i-XaORYY4iEklk5aiQjyjOVYAMjovkZNazjMfkeNKhOt_R64ta1GQUlBD54Yr3yhb9jZdk-C0PDBSxbTMafNZgGGSXOR_LTin0rqGsSe2RKQ3fGF810D4jlOloRp1lMeR69kjHagI73xSJMCbQBZcVCGzyLQ1Gtg9H5a-F9miHuc5Y"/>
+            <div class="absolute top-4 left-4"><span class="px-3 py-1 bg-blue-600 text-white text-[10px] font-bold uppercase rounded-lg">Tin công ty</span></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 text-slate-400 text-xs mb-3"><span class="material-symbols-outlined text-sm">calendar_today</span><span>Oct 20, 2023</span></div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 leading-snug mb-3 group-hover:text-primary transition-colors">FCBVN đạt chứng nhận ISO 45001 về tiêu chuẩn an toàn</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">Chúng tôi tự hào thông báo cột mốc mới trong tuân thủ an toàn toàn cầu và chất lượng vận hành...</p>
+            <a class="inline-flex items-center text-primary font-bold text-sm gap-1 hover:gap-2 transition-all" href="#">Xem đầy đủ <span class="material-symbols-outlined text-lg">arrow_right_alt</span></a>
+          </div>
+        </div>
+        <div class="break-inside-avoid group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300">
+          <div class="relative overflow-hidden aspect-square">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Smart safety dashboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZNJo2qBfKxA39kurpFNx2Oe2nd4DwIHm-YC_en6sp1J6MMutgP2NUKWvJP6-24M41MLx5w5CtVsRyAY_FIuPIdTNjIv9o5XG6OOGSRMgw8Og7py63mdXVzP4n2MUp6_dfHhsqv5atOrgQGnlFLdcB5RcUirl2F_7P6dVVRYGu3kx0dKbs3Ja502n7dtrGRU8_iOoho7XHOUw3KF98skuQCvMieXGNA7V4dvBicfg8aT7GV5yq7oNMuHftc4yzD-PySC5sy-2f5o4"/>
+            <div class="absolute top-4 left-4"><span class="px-3 py-1 bg-amber-500 text-white text-[10px] font-bold uppercase rounded-lg">Đổi mới</span></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 text-slate-400 text-xs mb-3"><span class="material-symbols-outlined text-sm">calendar_today</span><span>Oct 15, 2023</span><span class="mx-1">•</span><span>8 phút đọc</span></div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 leading-snug mb-3 group-hover:text-primary transition-colors">Tương lai của AI trong hệ thống phát hiện khói sớm</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">Tìm hiểu cách học máy giảm 90% báo động giả trong khi phát hiện cháy thật nhanh hơn bao giờ hết...</p>
+            <a class="inline-flex items-center text-primary font-bold text-sm gap-1 hover:gap-2 transition-all" href="#">Tìm hiểu thêm <span class="material-symbols-outlined text-lg">arrow_right_alt</span></a>
+          </div>
+        </div>
+        <div class="break-inside-avoid group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300">
+          <div class="relative overflow-hidden aspect-[4/3]">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Industrial fire equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3mufdkOE9mIcVkCZcNb4EGzSfaQItEkoaMzSAJgfvjOQGyYWBbexaDY7tk3YUnrBZRE7GGoe_F_S_MHpOOI5t1DPMYF136MK_Qt4X9o-mJrMjvCTU3Bj8D7UU3ot0qGxRTk2PUNoSodwT5AQuEY-rH-fyOpPwidoSvPaEz1LkhMJhvqQ8D_JkweaKv-mqMNcqBdeMvaBHK30wIPQ7KZF8rpMiIqA8iyQXdn1JHAk7mwapjMRgi5KTcsqiUW18bNdSXQwfjNdphZY"/>
+            <div class="absolute top-4 left-4"><span class="px-3 py-1 bg-emerald-600 text-white text-[10px] font-bold uppercase rounded-lg">Công nghiệp</span></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 text-slate-400 text-xs mb-3"><span class="material-symbols-outlined text-sm">calendar_today</span><span>Oct 12, 2023</span></div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 leading-snug mb-3 group-hover:text-primary transition-colors">Chữa cháy kho: Hệ thống ống khô và ống ướt</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">Hệ thống nào phù hợp kho lạnh của bạn? Chúng tôi phân tích chi phí, lợi ích và yêu cầu bảo trì...</p>
+            <a class="inline-flex items-center text-primary font-bold text-sm gap-1 hover:gap-2 transition-all" href="#">Đọc hướng dẫn <span class="material-symbols-outlined text-lg">arrow_right_alt</span></a>
+          </div>
+        </div>
+        <div class="break-inside-avoid group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300">
+          <div class="relative overflow-hidden aspect-[3/4]">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Fire extinguisher" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdzOu7Yo0zdP-CylY3VC2R26WlyZeCW-IRKTDV34Mq-lMptsBbqZ4_vz7AvZdodGmqtOz9SzLfkLvPpu6NRNFEEPrBVt497ZJQFT5q8ZifIc7jCffD9VIAXGS_ZHvHOuO7zWOxH5hoQlJr6B-v_-DLzkF1-e8jTe7kREISVd2Lq87E1f3QiJApXfbsa9GmZ0MQFF5WY-eWgf1A2iugyQvGxgqJqan0uLemh_HMl-9Az8lIBVNTrOAPGmCCzO6RW6Vjibp3FGDUgZE"/>
+            <div class="absolute top-4 left-4"><span class="px-3 py-1 bg-primary text-white text-[10px] font-bold uppercase rounded-lg">Mẹo an toàn</span></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 text-slate-400 text-xs mb-3"><span class="material-symbols-outlined text-sm">calendar_today</span><span>Oct 08, 2023</span><span class="mx-1">•</span><span>3 phút đọc</span></div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 leading-snug mb-3 group-hover:text-primary transition-colors">Bảo trì bình chữa cháy cơ bản</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">Đừng đợi đến lúc khẩn cấp mới phát hiện thiết bị hỏng. Làm theo checklist hàng tháng đơn giản của chúng tôi...</p>
+            <a class="inline-flex items-center text-primary font-bold text-sm gap-1 hover:gap-2 transition-all" href="#">Xem checklist <span class="material-symbols-outlined text-lg">arrow_right_alt</span></a>
+          </div>
+        </div>
+        <div class="break-inside-avoid group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300">
+          <div class="relative overflow-hidden aspect-[16/9]">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Modern building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE55Gq5y7bXrQWMNmZDGk-4uG523eMIOF6CTS9KoNZjfaiuzjwrCJlAIAWQQrZHmIQ_RJcYpTvKm1oh7FlyJc03dkX_IW1TEKi_RpouV9tO_Prk2AzDBp3X6TdS1bXxjXf8zjD9-lXNTMnFZW30ChLEA5kVpYE3sudFt6zNTXqT9D18HYrXGaasV4smE90d4UOZ_LpYTzDbf_jwatZjspRg3Rehg9D4wztI8vEUCTfaDlXeai7Xb2wzD3UvLIN1xLQgS127CSpOuM"/>
+            <div class="absolute top-4 left-4"><span class="px-3 py-1 bg-blue-600 text-white text-[10px] font-bold uppercase rounded-lg">Tin công ty</span></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 text-slate-400 text-xs mb-3"><span class="material-symbols-outlined text-sm">calendar_today</span><span>Sep 28, 2023</span></div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 leading-snug mb-3 group-hover:text-primary transition-colors">Mở rộng: Trung tâm dịch vụ mới tại trung tâm</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">Để phục vụ khách hàng công nghiệp tốt hơn, chúng tôi đã khai trương cơ sở hiện đại mới với ứng phó khẩn cấp 24/7...</p>
+            <a class="inline-flex items-center text-primary font-bold text-sm gap-1 hover:gap-2 transition-all" href="#">Đọc thêm <span class="material-symbols-outlined text-lg">arrow_right_alt</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="flex justify-center items-center gap-4 mt-12 py-8 border-t border-slate-200 dark:border-slate-800">
+        <button class="flex items-center justify-center size-10 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-400 hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined">chevron_left</span></button>
+        <div class="flex gap-2">
+          <button class="size-10 rounded-lg bg-primary text-white font-bold" type="button">1</button>
+          <button class="size-10 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 font-bold transition-all" type="button">2</button>
+          <button class="size-10 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 font-bold transition-all" type="button">3</button>
+          <span class="flex items-center px-2 text-slate-400">...</span>
+          <button class="size-10 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 font-bold transition-all" type="button">12</button>
+        </div>
+        <button class="flex items-center justify-center size-10 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-400 hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined">chevron_right</span></button>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+</div>
+<script src="js/components.js"></script>
+<script>FCBVN.renderHeader('news'); FCBVN.renderFooter();</script>
+</body>
+</html>

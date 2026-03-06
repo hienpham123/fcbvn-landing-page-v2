@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>FCBVN – Dịch vụ Phòng cháy chữa cháy & An toàn chuyên nghiệp</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f20d0d",
+            "background-light": "#f8f5f5",
+            "background-dark": "#221010",
+          },
+          fontFamily: { "display": ["Public Sans"] },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Public Sans', sans-serif;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+  <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+    <div id="site-header"></div>
+
+    <main class="flex-1">
+      <!-- Hero Section -->
+      <section class="relative h-[400px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-slate-900">
+          <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent z-10"></div>
+          <img alt="Professional Fire Safety Equipment" class="w-full h-full object-cover opacity-60"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXFQ0Q9x5ACr65rA88hojdc9oTJ4QaJ6V6jW29kSfdhxKhQlQYvCPOiQpJywSihrsNJfHm01VeyU56_ZG-sZrxKBKMuEvMmz-kyh8uvsGA2V-TLupePuB4sWSXCqKrXlASp8ULKPSea2sYlzdM4vMWAS3DUleghToeI-jPJV5Yn_TeOFP0-xDtRsr9aUlqtS2TdLzm48ZpZ_pOBTgd-3tpJnJcN0DD-KOdN0pg7L6TVzbQ0a9y2yXhcy0IKWsO3yHNluBuEA4EVz0" />
+        </div>
+        <div class="container mx-auto px-4 lg:px-40 relative z-20">
+          <div class="max-w-2xl">
+            <span
+              class="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-full mb-4 uppercase tracking-widest">Giải pháp của chúng tôi</span>
+            <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-6">Dịch vụ Phòng cháy chữa cháy <br />&amp; An toàn chuyên nghiệp</h1>
+            <p class="text-slate-300 text-lg md:text-xl leading-relaxed">Giải pháp an toàn toàn diện từ đầu đến cuối, bảo vệ tính mạng, tài sản và hoạt động kinh doanh nhờ đổi mới và chất lượng kỹ thuật.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Grid -->
+      <section id="services" class="py-20 bg-background-light dark:bg-background-dark">
+        <div class="container mx-auto px-4 lg:px-40">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div class="max-w-2xl">
+              <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Các lĩnh vực dịch vụ cốt lõi</h2>
+              <p class="text-slate-600 dark:text-slate-400 text-lg">Chúng tôi cung cấp dịch vụ kỹ thuật và bảo trì chuyên sâu cho nhiều ngành, đảm bảo tuân thủ tiêu chuẩn phòng cháy chữa cháy toàn cầu và địa phương.</p>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="p-2 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary transition-all"><span
+                  class="material-symbols-outlined">grid_view</span></button>
+              <button
+                class="p-2 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary transition-all"><span
+                  class="material-symbols-outlined">view_list</span></button>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="group bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 relative overflow-hidden">
+              <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity"><span
+                  class="material-symbols-outlined text-8xl">clinical_notes</span></div>
+              <div
+                class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-3xl">clinical_notes</span></div>
+              <h3 class="text-xl font-bold mb-3 dark:text-white">Tư vấn an toàn cháy nổ</h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">Đánh giá rủi ro và kiểm toán tuân thủ chuyên nghiệp, đảm bảo cơ sở của bạn đáp ứng quy định an toàn quốc gia và yêu cầu bảo hiểm.</p>
+              <button class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">Xem thêm <span
+                  class="material-symbols-outlined text-sm">arrow_forward</span></button>
+            </div>
+            <div
+              class="group bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 relative overflow-hidden">
+              <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity"><span
+                  class="material-symbols-outlined text-8xl">architecture</span></div>
+              <div
+                class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-3xl">architecture</span></div>
+              <h3 class="text-xl font-bold mb-3 dark:text-white">Thiết kế &amp; Kỹ thuật hệ thống</h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">Thiết kế chữa cháy và phát hiện cháy tùy chỉnh, sử dụng BIM và tính toán thủy lực tiên tiến cho hiệu suất tối ưu.</p>
+              <button class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">Xem thêm <span
+                  class="material-symbols-outlined text-sm">arrow_forward</span></button>
+            </div>
+            <div
+              class="group bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 relative overflow-hidden">
+              <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity"><span
+                  class="material-symbols-outlined text-8xl">box</span></div>
+              <div
+                class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-3xl">box</span></div>
+              <h3 class="text-xl font-bold mb-3 dark:text-white">Cung cấp thiết bị</h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">Bộ sưu tập bình chữa cháy, đầu phun và hệ thống báo cháy thông minh đạt chứng nhận UL/FM từ nhà sản xuất hàng đầu.</p>
+              <button class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">Xem thêm <span
+                  class="material-symbols-outlined text-sm">arrow_forward</span></button>
+            </div>
+            <div
+              class="group bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 relative overflow-hidden">
+              <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity"><span
+                  class="material-symbols-outlined text-8xl">engineering</span></div>
+              <div
+                class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-3xl">engineering</span></div>
+              <h3 class="text-xl font-bold mb-3 dark:text-white">Bảo trì &amp; Kiểm định</h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">Hỗ trợ kỹ thuật 24/7 và chương trình bảo trì phòng ngừa định kỳ để hệ thống luôn sẵn sàng hoạt động.</p>
+              <button class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">Xem thêm <span
+                  class="material-symbols-outlined text-sm">arrow_forward</span></button>
+            </div>
+            <div
+              class="group bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 relative overflow-hidden">
+              <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity"><span
+                  class="material-symbols-outlined text-8xl">construction</span></div>
+              <div
+                class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-3xl">construction</span></div>
+              <h3 class="text-xl font-bold mb-3 dark:text-white">Thi công phòng cháy chữa cháy</h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">Dịch vụ lắp đặt trọn gói và quản lý dự án do kỹ sư có chứng chỉ đảm nhiệm cho công trình dân dụng, thương mại và công nghiệp.</p>
+              <button class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">Xem thêm <span
+                  class="material-symbols-outlined text-sm">arrow_forward</span></button>
+            </div>
+            <div
+              class="group bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 relative overflow-hidden">
+              <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity"><span
+                  class="material-symbols-outlined text-8xl">school</span></div>
+              <div
+                class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-3xl">school</span></div>
+              <h3 class="text-xl font-bold mb-3 dark:text-white">Đào tạo &amp; Huấn luyện</h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">Trang bị cho nhân viên diễn tập PCCC, sử dụng bình chữa cháy và quy trình thoát nạn khẩn cấp.</p>
+              <button class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">Xem thêm <span
+                  class="material-symbols-outlined text-sm">arrow_forward</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA/Contact Section -->
+      <section class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute bottom-0 right-0 w-1/3 h-1/3 bg-primary/20 blur-[120px] rounded-full"></div>
+        <div class="container mx-auto px-4 lg:px-40 relative z-10">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 class="text-4xl font-black mb-6">Cần kế hoạch an toàn cháy nổ riêng?</h2>
+              <p class="text-slate-400 text-lg mb-8 leading-relaxed">Chuyên gia của chúng tôi sẵn sàng phân tích yêu cầu dự án. Liên hệ ngay để được tư vấn ban đầu miễn phí và báo giá dịch vụ chi tiết.</p>
+              <div class="space-y-4">
+                <div class="flex items-center gap-4">
+                  <span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">call</span>
+                  <div>
+                    <p class="text-sm text-slate-400">Gọi đường dây nóng 24/7</p>
+                    <p class="font-bold">+84 (0) 123 456 789</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">mail</span>
+                  <div>
+                    <p class="text-sm text-slate-400">Email đội hỗ trợ</p>
+                    <p class="font-bold">contact@fcbvn.safety.vn</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-slate-800 p-8 md:p-10 rounded-2xl shadow-2xl">
+              <form class="space-y-4" action="contact.html" method="get">
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="space-y-2">
+                    <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Họ và tên</label>
+                    <input
+                      class="w-full bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 rounded-lg p-3 text-slate-900 dark:text-white focus:ring-primary focus:border-primary"
+                      placeholder="Nguyễn Văn A" type="text" name="name" />
+                  </div>
+                  <div class="space-y-2">
+                    <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Email</label>
+                    <input
+                      class="w-full bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 rounded-lg p-3 text-slate-900 dark:text-white focus:ring-primary focus:border-primary"
+                      placeholder="email@congty.com" type="email" name="email" />
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Dịch vụ quan tâm</label>
+                  <select
+                    class="w-full bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 rounded-lg p-3 text-slate-900 dark:text-white focus:ring-primary focus:border-primary"
+                    name="service">
+                    <option>Tư vấn an toàn cháy nổ</option>
+                    <option>Thiết kế &amp; Kỹ thuật hệ thống</option>
+                    <option>Bảo trì &amp; Kiểm định</option>
+                    <option>Cung cấp thiết bị</option>
+                  </select>
+                </div>
+                <div class="space-y-2">
+                  <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Nội dung dự án</label>
+                  <textarea
+                    class="w-full bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 rounded-lg p-3 text-slate-900 dark:text-white focus:ring-primary focus:border-primary"
+                    placeholder="Mô tả yêu cầu của bạn..." rows="4" name="details"></textarea>
+                </div>
+                <button
+                  class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all"
+                  type="submit">Gửi yêu cầu</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+  </div>
+  <script src="js/components.js"></script>
+  <script>FCBVN.renderHeader('home'); FCBVN.renderFooter();</script>
+</body>
+
+</html>
