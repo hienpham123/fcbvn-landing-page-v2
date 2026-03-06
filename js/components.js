@@ -101,9 +101,21 @@ var FCBVN = (function () {
               '</a>' +
               '<p class="text-slate-400 text-sm leading-relaxed mb-8">Đơn vị hàng đầu cung cấp giải pháp tổng thể về phòng cháy chữa cháy, cam kết mang lại sự an toàn tuyệt đối cho khách hàng thông qua những sản phẩm và dịch vụ chất lượng cao nhất.</p>' +
               '<div class="flex gap-4">' +
-                '<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all" href="#" aria-label="Facebook">FB</a>' +
-                '<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all" href="#" aria-label="YouTube">YT</a>' +
-                '<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all" href="#" aria-label="LinkedIn">LI</a>' +
+                '<a class="p-3 rounded-full border border-white/10 bg-navy text-white hover:bg-primary hover:border-primary transition-colors" href="#" aria-label="Facebook">' +
+                  '<svg class="size-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">' +
+                    '<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />' +
+                  '</svg>' +
+                '</a>' +
+                '<a class="p-3 rounded-full border border-white/10 bg-navy text-white hover:bg-primary hover:border-primary transition-colors" href="#" aria-label="LinkedIn">' +
+                  '<svg class="size-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">' +
+                    '<path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.58c-1.14 0-2.06-.93-2.06-2.06 0-1.14.92-2.06 2.06-2.06s2.06.92 2.06 2.06c0 1.13-.92 2.06-2.06 2.06zM20.45 20.45h-3.56v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.15 1.46-2.15 2.96v5.7h-3.56V9h3.42v1.56h.05c.48-.9 1.63-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z" />' +
+                  '</svg>' +
+                '</a>' +
+                '<a class="p-3 rounded-full border border-white/10 bg-navy text-white hover:bg-primary hover:border-primary transition-colors" href="#" aria-label="YouTube">' +
+                  '<svg class="size-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">' +
+                    '<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />' +
+                  '</svg>' +
+                '</a>' +
               '</div>' +
             '</div>' +
             '<div class="lg:col-span-2">' +
